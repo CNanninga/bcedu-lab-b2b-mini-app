@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.0.2
+
+_Based on Vite (`create-vite`) 9.2.1_
+
+### Summary
+
+Framework and dependency upgrade. The progressive history was rebuilt on a clean `create-vite` 9.2.1 install, which moves the lab to Vite 8 and replaces the ESLint toolchain with oxlint. No lab code changes.
+
+### Changes
+
+- Rebuilt the progressive history on `npm create vite@9.2.1` (`react-ts` template), upgrading Vite from 7.1.7 to 8.3.0.
+- Replaced the ESLint toolchain with oxlint, matching the new template: removed `eslint`, `@eslint/js`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`, `typescript-eslint`, and `globals` (and `eslint.config.js`); added `oxlint` and `.oxlintrc.json`. The `lint` script now runs `oxlint`.
+- Upgraded `vite-plugin-css-injected-by-js` from 4.0.1 to 5.0.2 (major).
+- Upgraded `zod` from 4.4.3 to 4.6.5.
+- Upgraded template dependencies: `react`/`react-dom` to 19.2.8, `@vitejs/plugin-react` to 6.1.1, `typescript` to 6.0.2, and the `@types/*` packages.
+- Dropped the new template's demo assets (`public/favicon.svg`, `public/icons.svg`, `src/assets/hero.png`, `src/assets/vite.svg`) in the "Strip to boilerplate" step, consistent with the prior history.
+
 ## 1.0.1
 
 _Based on Vite (`create-vite`) 8.0.2_
